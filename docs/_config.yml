@@ -1,0 +1,11 @@
+title: Parts Unlimited Lite
+description: Документация учебного проекта
+lang: ru
+url: https://pda-organ-stud-project.github.io
+baseurl: /parts-unlimited-docs
+markdown: kramdown
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

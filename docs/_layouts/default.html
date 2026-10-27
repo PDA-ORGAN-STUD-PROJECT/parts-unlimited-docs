@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }} — {{ site.title }}</title>
+<style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;color:#1b2939;background:#f4f6f8;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:#165ca8}header{background:#152c44;color:white;padding:24px max(24px,calc((100vw - 1100px)/2))}header a{color:#fff;text-decoration:none}header strong{font-size:24px}header p{margin:4px 0 0;color:#ced9e4;font-size:14px}.shell{max-width:1150px;margin:30px auto;display:grid;grid-template-columns:235px 1fr;gap:28px;padding:0 24px}nav{align-self:start;padding:18px;background:#fff;border:1px solid #dce2e8;border-radius:8px}nav a{display:block;padding:7px 8px;text-decoration:none;border-radius:4px}nav a:hover{background:#edf3fa}nav .sub{padding-left:22px;font-size:14px}nav small{display:block;color:#596c7c;margin:12px 8px 5px}main{min-width:0;background:#fff;border:1px solid #dce2e8;border-radius:8px;padding:28px 36px}h1{font-size:30px;line-height:1.25;margin-top:0}h2{font-size:22px;line-height:1.35;margin-top:30px}table{border-collapse:collapse;width:100%;font-size:14px}td,th{border:1px solid #d5dde5;padding:10px 12px;text-align:left}th{background:#eef3f7}pre{overflow:auto;background:#f1f4f8;padding:16px;border-radius:6px}code{font-size:14px}footer{margin-top:34px;border-top:1px solid #dce2e8;padding-top:14px;color:#586b7c;font-size:13px}.muted{color:#586b7c}@media(max-width:760px){.shell{grid-template-columns:1fr;padding:0 12px;margin:16px auto;gap:16px}main{padding:24px 18px}nav{display:flex;flex-wrap:wrap;gap:3px}nav small{width:100%}nav a{font-size:14px}h1{font-size:26px}}
+</style></head><body>
+<header><a href="{{ '/' | relative_url }}"><strong>Parts Unlimited Lite</strong></a><p>Документация проекта · Практическая работа 1.2</p></header>
+<div class="shell"><nav aria-label="Документация">
+<a href="{{ '/' | relative_url }}">Главная</a>
+<a href="{{ '/start.html' | relative_url }}">Начало работы</a>
+<a href="{{ '/environment.html' | relative_url }}">Окружение разработки</a>
+<a href="{{ '/Our-team.html' | relative_url }}">Наша команда</a>
+<a href="{{ '/events/' | relative_url }}">Предстоящие события</a>
+<a class="sub" href="{{ '/events/january.html' | relative_url }}">События января</a>
+<a class="sub" href="{{ '/events/february.html' | relative_url }}">События февраля</a>
+<small>Ресурсы проекта</small>
+<a href="https://github.com/PDA-ORGAN-STUD-PROJECT/parts-unlimited-docs/wiki">GitHub Wiki</a>
+<a href="https://github.com/PDA-ORGAN-STUD-PROJECT/parts-unlimited-docs/tree/main/docs">Исходники страниц</a>
+</nav><main>{{ content }}<footer>Учебный проект команды PUL-Web. Документация публикуется из ветки main, папки docs.</footer></main></div>
+</body></html>
