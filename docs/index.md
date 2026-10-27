@@ -25,3 +25,39 @@ Wiki и сайт документации используют отдельны�
 ## Статус проекта
 
 В текущей работе подготовлена документация. Приложение, база данных и конвейер доставки приложения будут реализованы в следующих практических работах.
+
+
+
+flowchart TD
+    %% Группировка репозиториев
+    subgraph GitHubRemote ["Удаленный репозиторий GitHub"]
+        direction LR
+        subgraph MainRepo ["Репозиторий: parts-unlimited-docs"]
+            MainBranch["Ветка: main"]
+            DocsFolder["Папка: /docs"]
+            MainBranch ---> DocsFolder
+        end
+        
+        subgraph WikiRepo ["Репозиторий: parts-unlimited-docs.wiki"]
+            WikiPages["Markdown файлы (.md)"]
+            Sidebar["Навигация (_Sidebar.md)"]
+        end
+    end
+
+    %% Локальная машина
+    subgraph LocalMachine ["Рабочая платформа (Mac M1)"]
+        LocalGit["Локальный Git-клиент"]
+    end
+
+    %% Процесс автоматизации публикации
+    subgraph Hosting ["Хостинг сайтов"]
+        GHAction["GitHub Actions (Сборка Jekyll)"]
+        GHPages["GitHub Pages (https://github.io...)"]
+    end
+
+    %% Взаимодействие
+    LocalGit --->|git push main| MainBranch
+    LocalGit --->|git push wiki| WikiRepo
+    
+    DocsFolder --->|Триггер коммита| GHAction
+    GHAction --->|Публикация артефактов| GHPages
